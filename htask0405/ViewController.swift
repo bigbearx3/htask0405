@@ -33,13 +33,20 @@ class ViewController: UIViewController {
     @IBAction func steperValueChange(_ sender: Any) {
         labelSteper.text = String (steper.value)
     }
+    @IBAction func swittchTheme(_ sender: UISegmentedControl) {
+        setTheme()
+    }
+    
+    private func setTheme(){
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         labelUpDown.text = ""
         labelOnOff.text = switchImageOnOff.isOn ? "On" : "Off"
         labelSteper.text = String (steper.value)
-        labelSlider.text = String (hSlider.value)        
+        labelSlider.text = String (hSlider.value)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
