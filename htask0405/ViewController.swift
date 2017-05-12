@@ -39,17 +39,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func swittchTheme(_ sender: UISegmentedControl) {        
-       themeChanger?.setStyle(style: themes[segmentControlTheme.selectedSegmentIndex])
+       //themeChanger?.setStyle(style: themes[segmentControlTheme.selectedSegmentIndex])
+       themeChanger?.setTheme(theme: themeKit[segmentControlTheme.selectedSegmentIndex])
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        themeChanger = ThemeChanger(currentViewController: self)
+        themeChanger = ThemeChanger(current : self)
         labelUpDown.text = ""
         labelOnOff.text = switchImageOnOff.isOn ? "On" : "Off"
         labelSteper.text = String (steper.value)
-        labelSlider.text = String (hSlider.value)
-        themeChanger?.setStyle(style: themes[segmentControlTheme.selectedSegmentIndex])
+        labelSlider.text = String (hSlider.value)        
+        //themeChanger?.setStyle(style: themes[segmentControlTheme.selectedSegmentIndex])
         // Do any additional setup after loading the view, typically from a nib.
     }
 
